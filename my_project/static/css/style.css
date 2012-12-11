@@ -1,0 +1,44 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    display: block;
+    min-height: 500px;
+    margin-top: 3em;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    line-height: 10em;
+    min-height: 10em;
+    background-color: #bbeeff;
+    border-bottom: #0055bb 0.5em solid;
+    margin: 0 auto;
+}
+
+#header-logo {
+    margin: 1em;
+}
+
+#description {
+    margin: 1em;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    line-height: 10em;
+    min-height: 10em;
+    background-color: #bbeeff;
+    border-top: #0055bb 0.5em solid;
+    margin: 0 auto;
+}
