@@ -8,7 +8,7 @@ http://twitter.github.com/bootstrap/
 
 Requirements
 ------------
-To use it, you need to install a django valid version (1.4+ recommended). This can be done by:
+To use it, you need to install a django valid version (v1.4+ recommended). This can be done by:
 
         pip install django
 
@@ -20,5 +20,4 @@ To check your current version of django, do the following on an open terminal:
         
 About
 -----
-
 Any contribution is welcome to improve this project.
