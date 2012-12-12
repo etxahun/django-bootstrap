@@ -3,8 +3,7 @@ django-bootstrap
 
 Description
 -----------
-Boilerplate of a simple django new-project with Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development:
-http://twitter.github.com/bootstrap/
+Boilerplate of a simple [Django](https://www.djangoproject.com/) new-project with [Bootstrap](http://twitter.github.com/bootstrap/), a sleek, intuitive, and powerful front-end framework for faster and easier web development.
 
 Requirements
 ------------
