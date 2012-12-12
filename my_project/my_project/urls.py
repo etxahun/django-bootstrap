@@ -20,6 +20,9 @@ urlpatterns = patterns('',
 
     url(r'^my_app/', include('my_app.urls')),
 
+    # contact_app url
+    url(r'^contact/', include('contact_app.urls')),
+
     # Just for development purposes, should be served in another way in production
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )

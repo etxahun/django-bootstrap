@@ -1,0 +1,44 @@
+{% extends 'my_project/base.html' %}
+
+<!-- Content block ↓ -->
+{% block content %}
+
+    <form class="form-horizontal" action="" method="POST">
+    {% csrf_token %}
+        <fieldset>
+            <legend>Contacto:</legend>
+
+            {% for field in form %}
+
+                {% if field.errors %}
+                    <div class="control-group error">
+                        <label class="control-label" for="inputError">{{ field.label }}</label>
+                        <div class="controls">
+                            {{ field }}
+                            <span class="help-inline">{{ field.errors|striptags }}</span>
+                        </div>
+                    </div>
+
+                {% else %}
+                    <div class="control-group">
+                        <label class="control-label">{{ field.label }}</label>
+                        <div class="controls">
+                            {{ field }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <div class="form-actions">
+                <button type="submit" name="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Enviar</button>
+                <button type="reset" class="btn">Limpiar</button>
+                <a class="btn btn-danger" href="/">Cancelar</a>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}
