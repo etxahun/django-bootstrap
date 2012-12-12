@@ -18,6 +18,14 @@ To check your current version of django, do the following on an open terminal:
         >>> import django
         >>> django.VERSION
         
+Apps
+----
+### my_app
+
+### contact_app
+Simple version of a contact section which is based on forms and sends an email.
+STMP must be present to send the emails.
+        
 About
 -----
 Any contribution is welcome to improve this project.
