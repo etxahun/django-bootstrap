@@ -38,6 +38,9 @@ This is an overview of the different basic apps included in the project. The obj
 Simple version of a contact section which is based on forms and sends an email.
 STMP must be present to send the emails.
 
+### formset_app
+Funny example of how to use more than one formset inside a ModelForm and save it to a database. It requires [jquery.formset.js](http://code.google.com/p/django-dynamic-formset/), present in the static folder inside the app.
+
 ### my_app
         
 About
