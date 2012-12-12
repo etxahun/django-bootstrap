@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'my_app',
     'contact_app',
+    'formset_app',
 )
 
 # A sample logging configuration. The only tangible logging

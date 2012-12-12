@@ -1,0 +1,111 @@
+{% extends "my_project/base.html" %}
+
+<!-- Content block ↓ -->
+{% block content %}
+
+    <form action="" method="post" class="form-horizontal">
+        {% csrf_token %}
+
+        <legend>Añadir un nuevo Pokemon</legend>
+
+        <fieldset>
+            {% for field in form %}
+                <div class="control-group">
+                    <label class="control-label">{{ field.label }}</label>
+                    <div class="controls">
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="accordion" id="accordion">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseAttacks">
+                            <i class="icon-chevron-down"></i> Ataques
+                        </a>
+                    </div>
+                    <div id="collapseAttacks" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <table id="attack_formset" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    {% for form_a in attack_formset.forms %}
+                                        <tr>
+                                            <th>{{ form_a.attack_name.label_tag }}</th>
+                                            <td>{{ form_a.attack_name }}</td>
+                                            <th>{{ form_a.learning_level.label_tag }}</th>
+                                            <td>{{ form_a.learning_level }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    {{ attack_formset.management_form }}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTypes">
+                            <i class="icon-chevron-down"></i> Tipos
+                        </a>
+                    </div>
+                    <div id="collapseTypes" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <table id="type_formset" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    {% for form_t in type_formset.forms %}
+                                        <tr>
+                                            <th>{{ form_t.pokemon_type.label_tag }}</th>
+                                            <td>{{ form_t.pokemon_type }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    {{ type_formset.management_form }}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" name="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Añadir</button>
+                <button type="reset" class="btn">Limpiar</button>
+                <a class="btn btn-danger" href="/">Cancelar</a>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
+
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $("textarea").attr("rows", 3);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#attack_formset tbody tr').formset({
+                prefix: '{{ attack_formset.prefix }}',
+                addText: 'Nuevo ataque',
+                addCssClass: 'btn btn-info',
+                deleteText: ' Eliminar',
+                deleteCssClass: 'btn',
+            });
+
+            $('#type_formset tbody tr').formset({
+                prefix: '{{ type_formset.prefix }}',
+                addText: 'Nuevo tipo',
+                addCssClass: 'btn btn-info',
+                deleteText: 'Eliminar',
+                deleteCssClass: 'btn',
+            });
+        })
+    </script>
+
+{% endblock %}

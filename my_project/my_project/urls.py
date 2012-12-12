@@ -23,6 +23,9 @@ urlpatterns = patterns('',
     # contact_app url
     url(r'^contact/', include('contact_app.urls')),
 
+    # formset_app url
+    url(r'^formset/', include('formset_app.urls')),
+
     # Just for development purposes, should be served in another way in production
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
