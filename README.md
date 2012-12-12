@@ -17,13 +17,28 @@ To check your current version of django, do the following on an open terminal:
         >>> import django
         >>> django.VERSION
         
+For running the project, open a terminal window in django-bootstrap's folder and type the following commands:
+
+        cd my_project
+        python manage.py runserver
+        
+Use "ctrl+c" to exit server mode.
+
+Another useful commands:
+
+* Create a database based on your models.
+
+            python manage.py syncdb
+        
 Apps
 ----
-### my_app
+This is an overview of the different basic apps included in the project. The objective is to have the most used apps already implemented and just adapt them to the project-specific requirements.
 
 ### contact_app
 Simple version of a contact section which is based on forms and sends an email.
 STMP must be present to send the emails.
+
+### my_app
         
 About
 -----
