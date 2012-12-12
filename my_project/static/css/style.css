@@ -33,6 +33,38 @@ header {
     margin: 1em;
 }
 
+.accordion-toggle {
+    text-decoration: none;
+}
+
+.accordion-toggle:hover {
+    text-decoration: none;
+}
+
+.dynamic-form {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.dynamic-form th {
+    width: 100px;
+    padding-top: 5px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.dynamic-form td {
+    margin-left: 180px;
+}
+
+.delete-formset-row {
+    margin-left: 1em;
+}
+
+.form-actions button, a {
+    margin: 0 1em;
+}
+
 footer {
     text-align: center;
     width: 100%;

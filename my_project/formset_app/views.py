@@ -9,7 +9,6 @@ from django.http import HttpResponseRedirect
 from formset_app.models import *
 from formset_app.forms import *
 
-
 def formset(request):
     form = MetaPokemonForm(prefix = 'pokemon_fs')
     attack_formset = AttackFormSet(instance = Pokemon(), prefix = 'attack_fs')
@@ -18,11 +17,21 @@ def formset(request):
     if request.POST:
         form = MetaPokemonForm(request.POST, prefix = 'pokemon_fs')
         if form.is_valid():
+            cd_p = form.cleaned_data
+
+            print "2"
             pokemon = form.save(commit = False)
             attack_formset = AttackFormSet(request.POST, instance = pokemon, prefix = 'attack_fs')
             type_formset = TypeFormSet(request.POST, instance = pokemon, prefix = 'type_fs')
 
             # Do whatever with the cleaned data from the pokemon form
+
+            pokemon.name = cd_p['name']
+            pokemon.description = cd_p['description']
+            pokemon.number = cd_p['number']
+            pokemon.weight = cd_p['weight']
+            pokemon.height = cd_p['height']
+            pokemon.generation = cd_p['generation']
 
             pokemon.save()
 

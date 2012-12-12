@@ -11,6 +11,7 @@ from formset_app.models import *
 AttackFormSet = inlineformset_factory(Pokemon, Attack, extra = 1)
 TypeFormSet = inlineformset_factory(Pokemon, Type, extra = 1)
 
+
 class MetaPokemonForm(forms.ModelForm):
-	class Meta:
-		model = Pokemon
+    class Meta:
+        model = Pokemon
