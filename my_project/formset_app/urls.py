@@ -3,7 +3,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     url(r'^$', 'formset_app.views.formset', name = 'formset'),
-    url(r'^correct/$', 'formset_app.views.correct', name = 'correct'),
+    url(r'^added/$', 'formset_app.views.added', name = 'added'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

@@ -38,6 +38,10 @@ def formset(request):
             if attack_formset.is_valid():
                 for form_a in attack_formset:
                     if (len(form_a.cleaned_data) > 0):
+                        cd_a = form_a.cleaned_data
+
+                        form_a.attack_name = cd_a['attack_name']
+                        form_a.learning_level = cd_a['learning_level']
 
                         # Do whatever with the cleaned data from each attack form
 
@@ -50,6 +54,9 @@ def formset(request):
             if type_formset.is_valid():
                 for form_t in type_formset:
                     if (len(form_t.cleaned_data) > 0):
+                        cd_t = form_t.cleaned_data
+
+                        form_t.pokemon_type = cd_t['pokemon_type']
 
                         # Do whatever with the cleaned data from each type form
 
@@ -59,7 +66,7 @@ def formset(request):
 
                 type_formset.save()
 
-            return HttpResponseRedirect("/added")
+            return HttpResponseRedirect("added")
     else:
         form = MetaPokemonForm(prefix = 'pokemon_fs')
         attack_formset = AttackFormSet(instance = Pokemon(), prefix = 'attack_fs')
@@ -73,4 +80,4 @@ def formset(request):
 
 
 def added(request):
-    return render_to_response('added.html')
+    return render_to_response('formset_app/added.html')
