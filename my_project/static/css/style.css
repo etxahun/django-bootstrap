@@ -161,6 +161,7 @@ footer {
 }
 
 .span8 > h2 {
+    color: #5a5a5a;
     margin-bottom: 1em;
     border-bottom: 3px solid whiteSmoke;
 }
