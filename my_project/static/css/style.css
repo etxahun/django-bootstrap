@@ -70,7 +70,7 @@ header {
     margin-left: 1em;
 }
 
-.form-actions button, a {
+.form-actions > button, .form-actions > a {
     margin: 0 1em;
 }
 
@@ -154,4 +154,13 @@ footer {
     -webkit-border-radius: 4px 0 4px 0;
     -moz-border-radius: 4px 0 4px 0;
     border-radius: 4px 0 4px 0;
+}
+
+.container-fluid {
+    margin: 2.5em auto;
+}
+
+.span8 > h2 {
+    margin-bottom: 1em;
+    border-bottom: 3px solid whiteSmoke;
 }

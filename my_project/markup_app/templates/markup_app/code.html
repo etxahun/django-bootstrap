@@ -10,6 +10,23 @@
 <!-- Content block ↓ -->
 {% block content-markup %}
 
+
+    <h2>Coding style</h2>
+
+    <p>
+        To print pretty code on our pages, we can use <a target="_blank" href="http://craig.is/making/rainbows/">Rainbow</a>, a code syntax highlighting library written in Javascript.
+    </p>
+
+    <p>
+        It allows different language sintax and CSS themes.
+    </p>
+
+    <p>
+        To allow code sintax highlightning, use <code>&lt;code&gt;...&lt;/code&gt;</code> or <code>&lt;pre&gt;...&lt;/pre&gt;</code> tags, with a <code>.data-language="LANGUAGE_NAME"</code> nested to it.
+    </p>
+
+    <br>
+
     <pre>
         <code data-language="generic">
     1.  Rainbow.extend('css', [
@@ -39,4 +56,8 @@
 {% block scripts %}
     <script src="{{ STATIC_PREFIX }}js/rainbow.js"></script>
     <script src="{{ STATIC_PREFIX }}js/language/generic.js"></script>
+
+    <script>
+        document.getElementById("code").className = "active";
+    </script>
 {% endblock %}

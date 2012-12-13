@@ -12,7 +12,7 @@
     <br>
 
     <p>
-        Wrap <code>&lt;blockquote&gt;</code> around any HTML as the quote.
+        Wrap <code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code> around any HTML as the quote.
     </p>
     <p>
         For straight quotes we recommend a <code>&lt;p&gt;...&lt;/p&gt;</code> tag.
@@ -46,4 +46,7 @@
 
 <!-- Scripts block ↓ -->
 {% block scripts %}
+    <script>
+        document.getElementById("blockquotes").className = "active";
+    </script>
 {% endblock %}
