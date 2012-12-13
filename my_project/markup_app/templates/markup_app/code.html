@@ -1,0 +1,42 @@
+{% extends "markup_app/markup_base.html" %}
+
+
+<!-- Stylesheets block ↓ -->
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}css/tomorrow-night.css"/>
+{% endblock %}
+
+
+<!-- Content block ↓ -->
+{% block content-markup %}
+
+    <pre>
+        <code data-language="generic">
+    1.  Rainbow.extend('css', [
+    2.      {
+    3.          'name': 'comment',
+    4.          'pattern': /\/\*[\s\S]*?\*\//gm
+    5.      },
+    6.      {
+    7.          'name': 'constant.hex-color',
+    8.          pattern': /#([a-f0-9]{3}|[a-f0-9]{6})(?=;|\s)/gi
+    9.      },
+    10.     {
+    11.         'matches': {
+    12.             1: 'constant.numeric',
+    13.             2: 'keyword.unit'
+    14.         },
+    15.         'pattern': /(\d+)(px|cm|s|%)?/g
+    16.     }
+    17. ], true);
+        </code>
+    </pre>
+
+{% endblock %}
+
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+    <script src="{{ STATIC_PREFIX }}js/rainbow.js"></script>
+    <script src="{{ STATIC_PREFIX }}js/language/generic.js"></script>
+{% endblock %}

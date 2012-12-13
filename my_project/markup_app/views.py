@@ -14,6 +14,10 @@ def index(request):
     return render_to_response('markup_app/markup_base.html', {}, context_instance = RequestContext(request))
 
 
+def code(request):
+    return render_to_response('markup_app/code.html', {}, context_instance = RequestContext(request))
+
+
 def headings(request):
     return render_to_response('markup_app/typography/headings.html', {}, context_instance = RequestContext(request))
 
