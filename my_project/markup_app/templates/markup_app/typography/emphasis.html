@@ -1,0 +1,48 @@
+{% extends "markup_app/typography/typography_base.html" %}
+
+<!-- Content block ↓ -->
+{% block spanwide-content %}
+
+	<h2>Emphasis</h2>
+
+	<p>
+		Make use of HTML's default emphasis tags with lightweight styles.
+	</p>
+
+	<br>
+
+    <p>Use <code>&lt;small&gt;...&lt;/small&gt;</code> for de-emphasizing inline or blocks of text.</p>
+	<div class="bs-docs-example">
+		<p><small>This line of text is meant to be small.</small></p>
+	</div>
+
+	<br>
+
+	<p>Use <code>&lt;strong&gt;...&lt;/strong&gt;</code> for emphasizing a snippet of text with a heavier font-weight.</p>
+	<div class="bs-docs-example">
+		<p><strong>This line of text is meant to be in bold</strong>.</p>
+	</div>
+
+	<br>
+
+	<p>Use <code>&lt;em&gt;...&lt;/em&gt;</code> for emphasizing a snippet of text with italics.</p>
+	<div class="bs-docs-example">
+		<p><em>This line of text is meant to be italic</em>.</p>
+	</div>
+
+	<br>
+
+	<p>Convey meaning through color with a handful of emphasis utility classes.</p>
+	<div class="bs-docs-example">
+		<p class="muted"><code>.muted</code> This line of text is meant to have a muted class.</p>
+		<p class="text-warning"><code>.text-warning</code> This line of text is meant to have a text-warning class.</p>
+		<p class="text-error"><code>.text-error</code> This line of text is meant to have a text-error class.</p>
+		<p class="text-info"><code>.text-info</code> This line of text is meant to have a text-info class.</p>
+		<p class="text-success"><code>.text-success</code> This line of text is meant to have a text-success class.</p>
+	</div>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}

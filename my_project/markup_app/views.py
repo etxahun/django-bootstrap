@@ -16,3 +16,7 @@ def index(request):
 
 def typography(request):
     return render_to_response('markup_app/typography/headings.html', {}, context_instance = RequestContext(request))
+
+
+def emphasis(request):
+    return render_to_response('markup_app/typography/emphasis.html', {}, context_instance = RequestContext(request))

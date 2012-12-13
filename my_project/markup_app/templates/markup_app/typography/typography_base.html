@@ -6,17 +6,20 @@
 	<div class="row-fluid">
 
 		<!-- Sidebar content ↓ -->
-		<div class="span2">
-			<ul class="nav nav-tabs nav-stacked">
-				<li>
+		<div class="span3">
+			<ul class="nav nav-tabs nav-stacked" id="sidebar">
+				<li id="headings">
 					<a href="">Headings</a>
+				</li>
+				<li id="emphasis">
+					<a href="emphasis">Emphasis</a>
 				</li>
 			</ul>
 		</div>
 
 		<!-- Body content ↓ -->
-		<div class="span10">
-			{% block span10-content %}
+		<div class="span9">
+			{% block spanwide-content %}
 			{% endblock %}
 		</div>
 

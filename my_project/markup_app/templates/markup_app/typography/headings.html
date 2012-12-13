@@ -1,7 +1,13 @@
 {% extends "markup_app/typography/typography_base.html" %}
 
 <!-- Content block ↓ -->
-{% block span10-content %}
+{% block spanwide-content %}
+
+	<h2>Headings</h2>
+
+	<p>
+		All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.
+	</p>
 
     <div class="bs-docs-example">
         <h1>h1. Heading 1</h1>
@@ -16,4 +22,8 @@
 
 <!-- Scripts block ↓ -->
 {% block scripts %}
+	<script>
+		// $("#sidebar > li").removeClass("active");
+		// $("#headings").addClass("active");
+	</script>
 {% endblock %}
