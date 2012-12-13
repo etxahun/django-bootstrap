@@ -41,7 +41,8 @@ STMP must be present to send the emails.
 ### formset_app
 Funny example of how to use more than one formset inside a ModelForm and save it to a database. It requires [jquery.formset.js](http://code.google.com/p/django-dynamic-formset/), present in the static folder inside the app.
 
-### my_app
+### markup_app
+This application shows different markup styles and how to generate them, to directly use in the project pages.
         
 About
 -----
