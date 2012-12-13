@@ -1,0 +1,37 @@
+{% extends "my_project/base.html" %}
+
+<!-- Content block ↓ -->
+{% block content %}
+
+    <div class="container-fluid">
+        <nav>
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="typography">Typography</a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            {% block content-fluid %}
+            {% endblock %}
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}

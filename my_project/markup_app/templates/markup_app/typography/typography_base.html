@@ -1,0 +1,29 @@
+{% extends "markup_app/markup_base.html" %}
+
+<!-- Content block ↓ -->
+{% block content-fluid %}
+
+	<div class="row-fluid">
+
+		<!-- Sidebar content ↓ -->
+		<div class="span2">
+			<ul class="nav nav-tabs nav-stacked">
+				<li>
+					<a href="">Headings</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Body content ↓ -->
+		<div class="span10">
+			{% block span10-content %}
+			{% endblock %}
+		</div>
+
+	</div>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}
