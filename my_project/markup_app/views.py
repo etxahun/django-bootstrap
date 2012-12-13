@@ -20,3 +20,7 @@ def typography(request):
 
 def emphasis(request):
     return render_to_response('markup_app/typography/emphasis.html', {}, context_instance = RequestContext(request))
+
+
+def blockquotes(request):
+    return render_to_response('markup_app/typography/blockquotes.html', {}, context_instance = RequestContext(request))

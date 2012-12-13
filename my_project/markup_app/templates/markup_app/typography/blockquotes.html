@@ -1,0 +1,49 @@
+{% extends "markup_app/typography/typography_base.html" %}
+
+<!-- Content block ↓ -->
+{% block spanwide-content %}
+
+    <h2>Blockquotes</h2>
+
+    <p>
+        For quoting blocks of content from another source within your document.
+    </p>
+
+    <br>
+
+    <p>
+        Wrap <code>&lt;blockquote&gt;</code> around any HTML as the quote.
+    </p>
+    <p>
+        For straight quotes we recommend a <code>&lt;p&gt;...&lt;/p&gt;</code> tag.
+    </p>
+    <div class="bs-docs-example">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </div>
+
+    <br>
+
+    <p>
+        Add a <code>&lt;small&gt;...&lt;/small&gt;</code> tag for identifying the source.
+    </p>
+    <p>
+        Wrap the name of the source work in <code>&lt;cite&gt;...&lt;/cite&gt;</code>.
+    </p>
+    <div class="bs-docs-example">
+        <blockquote>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            </p>
+            <small>
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </small>
+        </blockquote>
+    </div>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}
