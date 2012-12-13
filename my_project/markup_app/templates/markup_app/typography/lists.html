@@ -1,0 +1,81 @@
+{% extends "markup_app/markup_base.html" %}
+
+<!-- Content block ↓ -->
+{% block content-markup %}
+
+    <h2>Lists</h2>
+
+    <h3>Unordered</h3>
+    <p>
+        A list of items in which the order does <em>not</em> explicitly matter.
+    </p>
+    <div class="bs-docs-example">
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+
+    <br>
+
+    <h3>Ordered</h3>
+    <p>
+        A list of items in which the order <em>does</em> explicitly matter.
+    </p>
+    <div class="bs-docs-example">
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit</li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ol>
+    </div>
+
+    <br>
+
+    <h3>Unstyled</h3>
+    <p>
+        Remove the default <code>list-style</code> and left padding on list items (immediate children only).
+    </p>
+    <div class="bs-docs-example">
+        <ul class="unstyled">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+
+{% endblock %}
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+{% endblock %}

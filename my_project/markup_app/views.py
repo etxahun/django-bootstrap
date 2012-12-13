@@ -14,7 +14,7 @@ def index(request):
     return render_to_response('markup_app/markup_base.html', {}, context_instance = RequestContext(request))
 
 
-def typography(request):
+def headings(request):
     return render_to_response('markup_app/typography/headings.html', {}, context_instance = RequestContext(request))
 
 
@@ -24,3 +24,7 @@ def emphasis(request):
 
 def blockquotes(request):
     return render_to_response('markup_app/typography/blockquotes.html', {}, context_instance = RequestContext(request))
+
+
+def lists(request):
+    return render_to_response('markup_app/typography/lists.html', {}, context_instance = RequestContext(request))
