@@ -40,3 +40,7 @@ def buttons(request):
 
 def tables(request):
     return render_to_response('markup_app/tables.html', {}, context_instance = RequestContext(request))
+
+
+def forms(request):
+    return render_to_response('markup_app/forms.html', {}, context_instance = RequestContext(request))

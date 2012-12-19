@@ -1,0 +1,132 @@
+{% extends "markup_app/markup_base.html" %}
+
+
+<!-- Stylesheets block ↓ -->
+{% block stylesheets %}
+{% endblock %}
+
+
+<!-- Content block ↓ -->
+{% block content-markup %}
+
+    <h2>Default form styles</h2>
+
+    <p>
+        Forms are the most usual way to have information input in websites, see how you can improve them using <strong>Bootstrap</strong>.
+    </p>
+
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Legend</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="inputText">Text</label>
+                <div class="controls">
+                    <input type="text" id="inputText" placeholder="placeholder">
+                    <span class="help-block">Block-level help text.</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputTextarea">Textarea</label>
+                <div class="controls">
+                    <textarea rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="checkbox">
+                    <input type="checkbox" value="">
+                        Check this if you want what's inside the box!
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Option one can be anything... even a box!
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Option two can be something else and selecting it will deselect option one
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputSelect">Select</label>
+                <div class="controls">
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                        <option>Option 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="prependedInput">Twitter</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on">@</span>
+                        <input id="prependedInput" type="text" placeholder="Username">
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="appendedInput">Bill's amount</label>
+                <div class="controls">
+                    <div class="input-append">
+                        <input id="appendedInput" type="text">
+                        <span class="add-on">€</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group warning">
+                <label class="control-label" for="inputWarning">Input with warning</label>
+                <div class="controls">
+                    <input type="text" id="inputWarning">
+                </div>
+            </div>
+
+            <div class="control-group error">
+                <label class="control-label" for="inputError">Input with error</label>
+                <div class="controls">
+                    <input type="text" id="inputError">
+                </div>
+            </div>
+
+            <div class="control-group info">
+                <label class="control-label" for="inputInfo">Input with info</label>
+                <div class="controls">
+                    <input type="text" id="inputInfo">
+                </div>
+            </div>
+
+            <div class="control-group success">
+                <label class="control-label" for="inputSuccess">Input with success</label>
+                <div class="controls">
+                    <input type="text" id="inputSuccess">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn">Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
+
+
+<!-- Scripts block ↓ -->
+{% block scripts %}
+    <script>
+        document.getElementById("forms").className = "active";
+    </script>
+{% endblock %}
