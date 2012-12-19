@@ -36,3 +36,7 @@ def lists(request):
 
 def buttons(request):
     return render_to_response('markup_app/buttons.html', {}, context_instance = RequestContext(request))
+
+
+def tables(request):
+    return render_to_response('markup_app/tables.html', {}, context_instance = RequestContext(request))

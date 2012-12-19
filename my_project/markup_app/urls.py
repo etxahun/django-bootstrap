@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^typography/lists/$', 'markup_app.views.lists', name = 'lists'),
 
     url(r'^buttons/$', 'markup_app.views.buttons', name = 'buttons'),
+
+    url(r'^tables/$', 'markup_app.views.tables', name = 'tables'),
 )
 
 urlpatterns += staticfiles_urlpatterns()
