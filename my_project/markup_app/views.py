@@ -32,3 +32,7 @@ def blockquotes(request):
 
 def lists(request):
     return render_to_response('markup_app/typography/lists.html', {}, context_instance = RequestContext(request))
+
+
+def buttons(request):
+    return render_to_response('markup_app/buttons.html', {}, context_instance = RequestContext(request))
