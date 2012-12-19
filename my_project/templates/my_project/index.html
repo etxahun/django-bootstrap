@@ -3,31 +3,25 @@
 <!-- Content block ↓ -->
 {% block content %}
 
-    <div class="jumbotron">
+    <div class="hero-unit">
         <h1>Hello World!</h1>
 
-        <p class="lead">
-            Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan-- Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. Oh God, my uncle. How am I ever gonna explain this? He is here.
-        </p>
+        <br>
 
-        <a class="btn btn-large btn-success" href="#">View on GitHub</a>
+        <p>django-bootstrap for fast web-prototyping</p>
     </div>
 
     <div class="row-fluid">
 
         <div class="span6">
             <div class="app">
-                <h4>Formsets</h4>
+                <h4>Markup</h4>
                 <p>
-                    Funny example of how to use more than one formset inside a ModelForm and save it to a database.
-                </p>
-
-                <p>
-                    It requires <a target="_blank" href="http://code.google.com/p/django-dynamic-formset/">jquery.formset.js</a>, present in the static folder inside the app.
+                    Shows different markup styles and how to generate them, to directly use in the project pages.
                 </p>
 
                 <div class="center">
-                    <a href="/formset" class="btn btn-primary">formset_app</a>
+                    <a href="/markup" class="btn btn-primary">markup_app</a>
                 </div>
             </div>
 
@@ -45,17 +39,42 @@
 
         <div class="span6">
             <div class="app">
-                <h4>Markup</h4>
+                <h4>Formsets</h4>
                 <p>
-                    Shows different markup styles and how to generate them, to directly use in the project pages.
+                    Funny example of how to use more than one formset inside a ModelForm and save it to a database.
+                </p>
+
+                <p>
+                    It requires <a target="_blank" href="http://code.google.com/p/django-dynamic-formset/">jquery.formset.js</a>, present in the static folder inside the app.
+                </p>
+
+                <p>
+                    Also the project will need an existing database.
+                </p>
+
+                <p>
+                    Launch: <code>python manage.py syncdb</code>
                 </p>
 
                 <div class="center">
-                    <a href="/markup" class="btn btn-primary">markup_app</a>
+                    <a href="/formset" class="btn btn-primary">formset_app</a>
                 </div>
             </div>
         </div>
 
+    </div>
+
+    <br>
+
+    <div class="center">
+        <h4>And much more!</h4>
+        <p>
+            Just checkout Bootstrap's website to see more styles to apply.
+        </p>
+
+        <div class="center">
+            <a target="_blank" href="http://twitter.github.com/bootstrap/" class="btn btn-success">Go to Bootstrap</a>
+        </div>
     </div>
 
 {% endblock %}
