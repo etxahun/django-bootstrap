@@ -39,7 +39,7 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render_to_response('contact.html', {'form': form}, context_instance = RequestContext(request))
+    return render_to_response('contact_app/contact.html', {'form': form}, context_instance = RequestContext(request))
 
 def correct(request):
-    return render_to_response('correct.html', {}, context_instance = RequestContext(request))
+    return render_to_response('contact_app/correct.html', {}, context_instance = RequestContext(request))
